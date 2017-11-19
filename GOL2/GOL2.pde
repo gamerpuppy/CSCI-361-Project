@@ -25,7 +25,7 @@ void setup(){
 void draw(){
   drawGrid(); // display grid on screen
   count++;
-  // every 10 generations, check to see if rules need to be modified
+  // every checkpoint generations, check to see if rules need to be modified
   if (count > checkpoint){
     count = 0;
     int totalPop = getTotalPop();
