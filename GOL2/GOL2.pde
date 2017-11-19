@@ -8,8 +8,8 @@ int count = 0;
 boolean populationBoost = false;
 // n is the boost factor: chance of random birth is 1/n when neighborSum == 2
 // (we can just have the probability equal 1 if we implement this in assembly, aka n = 1)
-int n = 20;
-int checkpoint = 100; // number of iterations before checking total population
+int n = 1;
+int checkpoint = 10; // number of iterations before checking total population
 int thresholdParam = 10; // enact boost threshold = totalcells/thresholdParam
 
 // our grid of cells
