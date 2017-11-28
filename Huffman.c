@@ -5,6 +5,7 @@
 //  Created by Keegan Millard on 10/31/17.
 //  Copyright © 2017 gamerpuppy. All rights reserved.
 //
+
 #ifndef Huffman_c
 #define Huffman_c
 
@@ -198,7 +199,6 @@ void compareDown(HuffNode * heap[], int size, int idx) {
     }
 }
 
-
 int buildHeap(HuffNode * heap[]) {
     int size = 0;
     for (int i = 0; i < NUM_CHARS; i++) {
@@ -222,7 +222,6 @@ void heapInsert(HuffNode * heap[], int idx) {
         }
     }
 }
-
 
 void countChars(char arr[]) {
     int i = 0;
