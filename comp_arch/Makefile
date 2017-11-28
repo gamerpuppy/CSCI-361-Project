@@ -44,7 +44,12 @@ part2.o: part2.S
 part3.o: part3.S
 # Compile for best debug view (lowest optimization)
 	$(CC) -c -march=armv8-a -g -O0 $^ -o $@
+	
+huff.o: huff.S
+# Compile for best debug view (lowest optimization)
+	$(CC) -c -march=armv8-a -g -O0 $^ -o $@
+	
 
-$(TARGET): main.o part2.o part3.o
+$(TARGET): main.o part2.o part3.o huff.o
 # Link with specific base address to suit VE model memory layout
-	$(LD) --specs=aem-ve.specs -Wl,--build-id=none main.o part2.o part3.o -o $@
+	$(LD) --specs=aem-ve.specs -Wl,--build-id=none main.o part2.o part3.o huff.o -o $@
